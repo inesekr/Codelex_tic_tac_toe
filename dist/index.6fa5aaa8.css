@@ -1,0 +1,96 @@
+* {
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#board {
+  width: 600px;
+  height: 600px;
+  color: #62c559;
+  background-color: #231f20;
+  border: 6px solid #62c559;
+  border-radius: 10px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin: 0 auto;
+  display: grid;
+}
+
+.box {
+  cursor: pointer;
+  border: 6px solid #62c559;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 4em;
+  font-weight: bold;
+  display: flex;
+}
+
+.row {
+  justify-content: space-between;
+  display: flex;
+}
+
+.button {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 200px;
+  background-color: #62c559;
+  border: none;
+  border-radius: 6px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 16px 32px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button:active, .button:focus {
+  -moz-outline-style: none;
+  border: none;
+  outline: 0;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #e7e7e7;
+}
+
+.button-hoverable span {
+  cursor: pointer;
+  transition: all .5s;
+  display: inline-block;
+  position: relative;
+}
+
+.button-hoverable span:after {
+  content: "»";
+  opacity: 0;
+  transition: all .5s;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+
+.button-hoverable:hover span {
+  padding-right: 25px;
+}
+
+.button-hoverable:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*# sourceMappingURL=index.6fa5aaa8.css.map */
